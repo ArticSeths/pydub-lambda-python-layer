@@ -1,1 +1,1 @@
-Version de pydub==0.23.1
+Version de pydub==0.25.1
