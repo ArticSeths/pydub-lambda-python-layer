@@ -186,21 +186,23 @@ def get_player_name():
         # should raise exception
         warn("Couldn't find ffplay or avplay - defaulting to ffplay, but may not work", RuntimeWarning)
         return "ffplay" """
-    return "/opt/python/ffprobe"
+    return "/opt/python/ffplay"
 
 
 def get_prober_name():
     """
     Return probe application, either avconv or ffmpeg
+    - MODIFIED FOR AWS LAMBDA
     """
-    if which("avprobe"):
+    """ if which("avprobe"):
         return "avprobe"
     elif which("ffprobe"):
         return "ffprobe"
     else:
         # should raise exception
         warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
-        return "ffprobe"
+        return "ffprobe" """
+    return "/opt/python/ffprobe"
 
 
 def fsdecode(filename):
